@@ -1,0 +1,30 @@
+{% extends 'projects/base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>These are my projects.</h1>
+                </div>
+            </div>
+            {% for project in projects %}
+            <div class="row my-2">
+                <div class="col-md-7 d-flex flex-column align-items-center justify-content-center">
+                    <a href="{% url 'projects:project_detail' project.pk %}">
+                        <img class="img-fluid rounded" src="{% static project.image %}" alt="" style="max-height: 250px">
+                    </a>
+                </div>
+                <div class="col-md-5 d-flex flex-column justify-content-center">
+                    <h3>{{ project.title }}</h3>
+                    <h6>Built with: {{ project.technology }}</h6>
+                    <p><strong>Description</strong><br>{{ project.description }}</p>
+                    <a class="btn btn-primary" href="{% url 'projects:project_detail' project.pk %}">Read More</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+{% endblock %}

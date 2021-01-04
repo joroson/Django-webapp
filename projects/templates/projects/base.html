@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Title</title>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+            <div class="container position-relative">
+                <a class="navbar-brand" href="/">Django</a>
+                <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link disabled" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/projects">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link disabled" href="/about">About</a></li>
+                        <!--
+                        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Mini-scripts</a>
+                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="/mini-scripts/weight-conversion">Weight Conversion</a>
+                                <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Not done</a><a class="dropdown-item" href="#">Super not done</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Account</a>
+                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="/account">Account Home</a>
+                                <div class="dropdown-divider"></div><a class="dropdown-item" href="/account/login">Login</a><a class="dropdown-item" href="/account/register">Register</a>
+                            </div>
+                        </li>
+                        -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>
